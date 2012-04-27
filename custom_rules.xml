@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PrayerMinder_custom_rules">
+  <target name="-pre-build">
+    <!-- Copy the android support library to the local project.
+         It's not needed yet, but will be soon to support fragments
+         on Froyo. -->
+    <copy file="${sdk.dir}/extras/android/support/v4/android-support-v4.jar"
+          todir="libs"/>
+  </target>
+</project>
+
