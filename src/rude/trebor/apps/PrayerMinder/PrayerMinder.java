@@ -1,4 +1,4 @@
-package org.rudeapps.PrayerMinder;
+package rude.trebor.apps.PrayerMinder;
 
 import android.app.Activity;
 import android.os.Bundle;
