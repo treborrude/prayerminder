@@ -1,9 +1,10 @@
-package org.rudeapps.PrayerMinder;
+package rude.trebor.apps.PrayerMinder;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
-public class PrayerMinder extends Activity
+public class PrayerMinder extends FragmentActivity
 {
     /** Called when the activity is first created. */
     @Override
