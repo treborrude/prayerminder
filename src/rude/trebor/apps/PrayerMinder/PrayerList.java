@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-public class PrayerMinder extends FragmentActivity
+public class PrayerList extends FragmentActivity
 {
     /** Called when the activity is first created. */
     @Override
