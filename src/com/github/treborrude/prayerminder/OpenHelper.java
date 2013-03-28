@@ -1,4 +1,4 @@
-package com.github.treborrude.PrayerMinder;
+package com.github.treborrude.prayerminder;
 import android.database.sqlite.SQLiteOpenHelper;
 
 class OpenHelper extends SQLiteOpenHelper
@@ -23,7 +23,7 @@ class OpenHelper extends SQLiteOpenHelper
     PRAYERS_ANSWERED + " TEXT, " +
     PRAYERS_LAST_PRAYED + " INTEGER);";
 
-  PrayerMinderOpenHelper(Context context)
+  OpenHelper(Context context)
   {
     super(context, PM_DATABASE_NAME, null, PM_DATABASE_VERSION);
   }

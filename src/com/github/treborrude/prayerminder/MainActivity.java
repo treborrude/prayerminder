@@ -1,4 +1,4 @@
-package com.github.treborrude.PrayerMinder;
+package com.github.treborrude.prayerminder;
 
 import android.app.Activity;
 import android.os.Bundle;
