@@ -1,7 +1,7 @@
 package com.github.treborrude.prayerminder;
 import android.database.sqlite.SQLiteOpenHelper;
 
-class OpenHelper extends SQLiteOpenHelper
+class DbHelper extends SQLiteOpenHelper
 {
   private static final String PM_DATABASE_NAME = "prayer_minder.db";
   private static final int PM_DATABASE_VERSION = 1;
@@ -23,7 +23,7 @@ class OpenHelper extends SQLiteOpenHelper
     PRAYERS_ANSWERED + " TEXT, " +
     PRAYERS_LAST_PRAYED + " INTEGER);";
 
-  OpenHelper(Context context)
+  DbHelper(Context context)
   {
     super(context, PM_DATABASE_NAME, null, PM_DATABASE_VERSION);
   }
