@@ -1,3 +1,4 @@
+package com.github.treborrude.PrayerMinder;
 import android.database.sqlite.SQLiteOpenHelper;
 
 class PrayerMinderOpenHelper extends SQLiteOpenHelper
