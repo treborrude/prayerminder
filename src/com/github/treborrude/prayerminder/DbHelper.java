@@ -68,6 +68,8 @@ class DbHelper extends SQLiteOpenHelper
   @Override
   public void onCreate(SQLiteDatabase db)
   {
-    db.execSQL(PRAYERS_TABLE_CREATE);
+    db.execSQL(PrayersTable.CREATE_TABLE);
+    db.execSQL(TagsTable.CREATE_TABLE);
+    db.execSQL(PrayersTagsJunctionTable.CREATE_TABLE);
   }
 }
