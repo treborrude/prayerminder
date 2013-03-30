@@ -1,5 +1,5 @@
 package com.github.treborrude.prayerminder;
 
-class PrayerListFragment extends SherlockFragment
+class PrayerListFragment extends SherlockListFragment
 {
 }
