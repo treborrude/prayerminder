@@ -4,10 +4,11 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
-<TextView
+<fragment
+    android:name="com.github.treborrude.prayermider.MainActivity"
+    android:id="@+id/prayerlist"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:text="Hello World, PrayerMinder"
+    android:layout_height="fill_parent"
     />
 </LinearLayout>
 
