@@ -1,4 +1,6 @@
 package com.github.treborrude.prayerminder;
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
 
@@ -27,7 +29,7 @@ class DbHelper extends SQLiteOpenHelper
     ANSWERED + " TEXT, " +
     LAST_PRAYED + " INTEGER);";
 
-    private PrayersTable(); // Prevent instantiation.
+    private PrayersTable(){} // Prevent instantiation.
   }
 
   static class TagsTable implements BaseColumns
@@ -42,14 +44,14 @@ class DbHelper extends SQLiteOpenHelper
     TAG + " TEXT NOT NULL, " +
     SYSTEM + " INTEGER NOT NULL);";
 
-    private TagsTable(); // Prevent instantiation.
+    private TagsTable(){} // Prevent instantiation.
   }
 
   static class PrayersTagsJunctionTable // I don't think I need BaseColumns in this case.
   {
-    static final string NAME = "prayerstagsjunction";
-    static final string PRAYER_ID = "prayerid";
-    static final string TAG_ID = "tagid";
+    static final String NAME = "prayerstagsjunction";
+    static final String PRAYER_ID = "prayerid";
+    static final String TAG_ID = "tagid";
 
     static final String CREATE_TABLE =
     "CREATE TABLE " + NAME + " (" +
@@ -57,7 +59,7 @@ class DbHelper extends SQLiteOpenHelper
     TAG_ID + " REFERENCES " + TagsTable.NAME + " (" + TagsTable._ID + "), " +
     "PRIMARY KEY (" + PRAYER_ID + ", " + TAG_ID + ") )";
 
-    private PrayersTagsJunctionTable(); // Prevent instantiation.
+    private PrayersTagsJunctionTable(){} // Prevent instantiation.
   }
 
   DbHelper(Context context)
@@ -71,5 +73,10 @@ class DbHelper extends SQLiteOpenHelper
     db.execSQL(PrayersTable.CREATE_TABLE);
     db.execSQL(TagsTable.CREATE_TABLE);
     db.execSQL(PrayersTagsJunctionTable.CREATE_TABLE);
+  }
+
+  @Override
+  public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
+  {
   }
 }

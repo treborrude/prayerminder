@@ -11,6 +11,6 @@ public class MainActivity extends SherlockFragmentActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.PrayerList);
+        setContentView(R.layout.main_activity);
     }
 }
