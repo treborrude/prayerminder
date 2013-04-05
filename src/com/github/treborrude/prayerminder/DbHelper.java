@@ -1,4 +1,6 @@
 package com.github.treborrude.prayerminder;
+
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -73,6 +75,23 @@ class DbHelper extends SQLiteOpenHelper
     db.execSQL(PrayersTable.CREATE_TABLE);
     db.execSQL(TagsTable.CREATE_TABLE);
     db.execSQL(PrayersTagsJunctionTable.CREATE_TABLE);
+
+    ContentValues tagInfo;
+    tagInfo.put("system", 1);
+
+    tagInfo.put("tag", "Answered");
+    db.insert(TagsTable.NAME, null, tagInfo);
+
+    tagInfo.put("system", 0);
+
+    tagInfo.put("tag", "Praises");
+    db.insert(TagsTable.NAME, null, tagInfo);
+
+    tagInfo.put("tag", "Healing");
+    db.insert(TagsTable.NAME, null, tagInfo);
+
+    tagInfo.put("tag", "Confessions");
+    db.insert(TagsTable.NAME, null, tagInfo);
   }
 
   @Override
