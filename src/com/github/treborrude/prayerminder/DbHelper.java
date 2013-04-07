@@ -76,7 +76,7 @@ class DbHelper extends SQLiteOpenHelper
     db.execSQL(TagsTable.CREATE_TABLE);
     db.execSQL(PrayersTagsJunctionTable.CREATE_TABLE);
 
-    ContentValues tagInfo;
+    ContentValues tagInfo = new ContentValues();
     tagInfo.put("system", 1);
 
     tagInfo.put("tag", "Answered");
